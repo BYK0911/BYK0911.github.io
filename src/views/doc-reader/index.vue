@@ -44,7 +44,7 @@
           文章标签：
           <div class="tag" v-for="tag in doc.keywords" :key="tag"> {{ tag }} </div>
         </div>
-        <div class="doc-detail" ref="docContent"></div>
+        <div class="doc-detail markdown-body" ref="docContent"></div>
       </div>
     </div>
   </div>
@@ -115,4 +115,8 @@ onMounted(() => {
     cursor: pointer;
   }
 }
+</style>
+
+<style lang="scss">
+@import url(../../components/md-editor/index.css);
 </style>
