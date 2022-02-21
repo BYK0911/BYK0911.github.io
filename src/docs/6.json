@@ -1,0 +1,14 @@
+{
+  "id": "6",
+  "title": "Canvas 基本绘图方法",
+  "author": "包宇坤",
+  "likes": 36,
+  "dislikes": 2,
+  "topic": "1",
+  "keywords": [
+    "canvas",
+    "javascript",
+    "html5"
+  ],
+  "content": "The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a <canvas> element. It is used for drawing shapes, text, images, and other objects."
+}
