@@ -113,8 +113,10 @@ const toTopic = (id: string) => {
 
 const filter = () => {
   docs.value = allDocs.filter(item => {
-    return (item.title.includes(keyword.value) || item.keywords.includes(keyword.value))
-    && (activeTag.value && item.keywords.includes(activeTag.value) || !activeTag.value)
+    const rx = new RegExp(keyword.value, 'i')
+    const rx2 = new RegExp(`^${activeTag.value}$`, 'i')
+    return (rx.test(item.title) || item.keywords.some(s => rx.test(s)))
+    && (!activeTag.value || item.keywords.some(s => rx2.test(s)))
   })
 }
 const handleTagChange = (tag: string) => {
