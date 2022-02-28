@@ -93,7 +93,18 @@ body,
 }
 
 .link {
-  color: #5af;
+  color: #59f;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.link-plain {
+  color: #666;
+  text-decoration: none;
+
+  &:hover {
+    color: #59f;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }

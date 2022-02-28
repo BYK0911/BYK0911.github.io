@@ -79,7 +79,10 @@ const createTopic = () => {
 }
 const createTag = () => {
   if (!newTag.value) return
-  !doc.keywords.includes(newTag.value) && doc.keywords.push(newTag.value)
+  const tags = newTag.value.split(/\s*,\s*/g);
+  tags.forEach(tag => {
+    !doc.keywords.includes(tag) && doc.keywords.push(tag)
+  })
   newTag.value = ''
 }
 const removeTag = (tag: string) => {
