@@ -103,6 +103,7 @@ onMounted(() => {
   padding: 10px;
   background: #f8f8f8;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .spectial-column {

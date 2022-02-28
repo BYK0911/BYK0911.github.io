@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="flex">
-        <div class="panel-left">
+        <div class="panel-left flex-item">
           <div class="flex-item panel">
             <div class="panel-header">
               <div class="panel-header__title">技能标签</div>
@@ -76,15 +76,18 @@
 import { reactive } from 'vue'
 import Job from './components/job.vue'
 import Education from './components/edu.vue'
+import Project from './components/proj.vue'
 
 const skills = ['Vue', 'Typescript', 'Canvas', 'Webpack', 'HTML5', 'CSS3', 'Javascript', 'Flutter', 'Git', 'Node']
 const tabs = [
   { name: 'job', label: '工作经历', component: 'Job' },
+  { name: 'proj', label: '项目经验', component: 'Project' },
   { name: 'edu', label: '教育经历', component: 'Education' },
 ]
 const cmps = {
   Education,
-  Job
+  Job,
+  Project
 }
 
 const currentTab = reactive({
