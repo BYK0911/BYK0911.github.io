@@ -45,13 +45,16 @@
           <div class="tag" v-for="tag in doc.keywords" :key="tag"> {{ tag }} </div>
         </div>
         <div class="doc-detail markdown-body" ref="docContent"></div>
+        <div class="next-page link" v-if='nextDoc'>
+          下一节：<span @click="nextDoc ? open(nextDoc) : ()=>{}"> {{ nextDoc.title }} </span>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import storage from '@/common/storage';
 import createMd from 'markdown-it'
@@ -80,6 +83,14 @@ const open = (d: typeof doc.value) => {
 
 onMounted(() => {
   docContent.value.innerHTML = md.render(doc.value.content)
+})
+
+const nextDoc = computed(() => {
+  const index = topic.value.indexOf(doc.value);
+  if (index > -1 && index + 1 < topic.value.length) {
+    return topic.value[index + 1]
+  }
+  return null
 })
 </script>
 
@@ -115,6 +126,10 @@ onMounted(() => {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+.next-page {
+  margin: 20px 0;
+  text-align: right;
 }
 </style>
 
