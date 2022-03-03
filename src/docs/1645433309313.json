@@ -1,0 +1,12 @@
+{
+  "value": {
+    "id": "1645433309313",
+    "title": "Canvas 绘图基础",
+    "content": "# canvas 基本绘图\n本篇文章主要设计以下内容\n* 绘制矩形\n* 绘制文本\n* 绘制图片\n\n## 绘制矩形\n* ctx.fillRect(x: number, y: number, width: number, height: number)\n* ctx.strokeRect(x: number, y: number, width: number, height: number)\n* ctx.fillText(text: string, x: number, y: number)\n* ctx.fillRect(text: string, x: number, y: number)\n* ctx.drawImage(img: ImageSource, x: number, y: number, width: number, height: number)\n",
+    "topic": "Canvas 绘图",
+    "keywords": [
+      "canvas",
+      "js"
+    ]
+  }
+}

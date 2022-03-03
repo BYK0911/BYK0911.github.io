@@ -1,0 +1,14 @@
+{
+  "value": {
+    "id": "1646029388219",
+    "title": "CEP 简介",
+    "content": "1. [CEP 简介](https://byk0911.github.io/#/doc/1646029388219)\n2. [CEP 插件目录结构](https://byk0911.github.io/)\n3. [搭建开发环境](https://byk0911.github.io/)\n4. [CEP 开发调试](https://byk0911.github.io/)\n5. [初步了解 CSInterface](https://byk0911.github.io/)\n6. [初步了解 ExtendScript](https://byk0911.github.io/)\n7. [Action Manager 简介](https://byk0911.github.io/)\n8. [Events](https://byk0911.github.io/)\n9. [签名打包](https://byk0911.github.io/)\n\n### 什么是 CEP ?\nCEP（Common Extension Platform）是 Adobe 产品的通用扩展平台。\n\nCEP 插件其实是运行在宿主软件窗口中的浏览器页面。\n\n使用 HTML、Javascript、CSS 及 node 技术开发扩展插件来扩展宿主软件的功能。\n\n### CEP 中的 JS 脚本\n在 CEP 扩展程序中有两类 javascript 脚本，分别运行在不同的运行环境中：\n\n* 一类运行在 ExtendScript 脚本解析其中，我们称之为 host 端的 jsx 脚本。\n* 一类运行在宿主环境内置的 Chromium 内核浏览器及 node 环境中，我们称之为 client 端 js 脚本。\n\n### 推荐阅读\n* [Adobe-CEP 官方文档](https://github.com/Adobe-CEP/CEP-Resources)\n* [零基础的 PhotoShop CEP 6 开发教程](https://www.jianshu.com/p/48b48c9f0b0a)",
+    "topic": "Adobe CEP 插件开发",
+    "keywords": [
+      "PS",
+      "CEP",
+      "Adobe",
+      "photoshop"
+    ]
+  }
+}

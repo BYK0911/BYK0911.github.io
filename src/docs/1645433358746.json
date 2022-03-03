@@ -1,0 +1,12 @@
+{
+  "value": {
+    "id": "1645433358746",
+    "title": "Canvas 绘制路径",
+    "content": "## 绘制路径常用API\n\n### 开始绘制路径\nctx.beginPath()\n\n### 结束当前路径\nctx.closePath()\n\n### 移动到某个位置\nctx.moveTo(x: number, y: number)\n\n### 连接到某个位置\nctx.lineTo(x: number, y: number)\n\n### 绘制圆弧\nctx.arcTo(x: number, y: number, r: number, x2: number, y2: number)\n\n### 填充路径\nctx.fill()\n\n### 描边路径\nctx.stroke()\n\n## 其他\n### 路径剪切\nctx.clip()\n\n### 一次贝塞尔曲线\nctx.quadraticCurveTo(ctrlPointX: number, ctrlPointY: number, x2: number, y2: number)\n\n### 二次贝塞尔曲线\nctx.besierCurveTo(ctrlPointX1: number, ctrlPointY1: number, ctrlPointX2: number, ctrlPointY2: number, x2: number, y2: number)",
+    "topic": "Canvas 绘图",
+    "keywords": [
+      "canvas",
+      "js"
+    ]
+  }
+}

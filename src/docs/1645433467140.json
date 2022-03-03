@@ -1,0 +1,11 @@
+{
+  "value": {
+    "id": "1645433467140",
+    "title": "Vue 数据传递",
+    "content": "1. props & emit\n2. v-model\n2. provide & inject\n3. store",
+    "topic": "Vue",
+    "keywords": [
+      "vue"
+    ]
+  }
+}
