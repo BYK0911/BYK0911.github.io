@@ -1,9 +1,7 @@
 <template>
-<div class="flex-v workspace">
-  <header-bar class="flex-item"></header-bar>
-  <div class="flex-main">
-    <router-view/>
-  </div>
+<div class="workspace">
+  <header-bar></header-bar>
+  <router-view/>
 </div>
 </template>
 

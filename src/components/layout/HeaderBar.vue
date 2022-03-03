@@ -24,7 +24,7 @@ export default defineComponent({
 <style scoped lang="scss">
 .header {
   height: 50px;
-  line-height: 50px;
+  line-height: 48px;
   background:#e0e0e0;
   border-bottom: 1px solid #ccc;
 }
