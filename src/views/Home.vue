@@ -11,6 +11,15 @@
         <div class="description"> {{ item.description }} </div>
       </div>
     </div>
+    <div class="img-wrap">
+      <div class="description-wrap">
+        <div class="label"> Flutter 开发 </div>
+        <div class="description"> 移动端模板工具 </div>
+      </div>
+      <div class="flutter-app">
+        <img v-for="(img, i) in flutterImgs" :key="i" :src="img" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,6 +55,11 @@ const list = [
     description: '地图服务器后台管理系统',
     img: require('../assets/geo_dialog.png')
   },
+]
+
+const flutterImgs = [
+  require('../assets/flutter_list.png'),
+  require('../assets/flutter_editor.png'),
 ]
 </script>
 
@@ -114,5 +128,11 @@ const list = [
       }
     }
   }
+}
+.flutter-app {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 80%;
 }
 </style>
