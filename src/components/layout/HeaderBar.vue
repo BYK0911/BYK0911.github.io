@@ -2,7 +2,7 @@
 <div class="header flex">
   <div class="logo flex-item"> YuKun.Bao </div>
   <div class="nav flex-main">
-    <router-link to="/">作品展示</router-link>
+    <router-link to="/home">作品展示</router-link>
     <router-link to="/doc">工作笔记</router-link>
     <router-link to="/about">个人简介</router-link>
   </div>

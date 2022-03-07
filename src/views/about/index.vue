@@ -39,6 +39,19 @@
           </div>
           <div class="flex-item panel">
             <div class="panel-header">
+              <div class="panel-header__title">个人项目</div>
+            </div>
+            <div class="panel-body">
+              <div
+              class="proj text-ellipsis"
+              v-for="(item, i) in projs"
+              :key="i"
+              @click="open(item.href)"
+            >{{ item.label }}</div>
+            </div>
+          </div>
+          <div class="flex-item panel">
+            <div class="panel-header">
               <div class="panel-header__title">个人爱好</div>
             </div>
             <div class="panel-body">
@@ -89,6 +102,16 @@ const cmps = {
   Job,
   Project
 }
+const projs = [
+  {
+    label: '在线模板制作',
+    href: 'https://byk0911.github.io/esl-templater/#/home'
+  },
+  {
+    label: '使用canvas2d绘图模拟3d效果',
+    href: 'https://byk0911.github.io/v3d/dist/'
+  },
+]
 
 const currentTab = reactive({
   name: 'job',
@@ -99,6 +122,9 @@ const toggleTab = (tab: { name: string, label: string, component: string }) => {
   currentTab.name = tab.name
   currentTab.label = tab.label
   currentTab.component = tab.component
+}
+const open = (href: string) => {
+  window.open(href)
 }
 </script>
 
@@ -149,6 +175,15 @@ const toggleTab = (tab: { name: string, label: string, component: string }) => {
   }
   &.is-active {
     color: #444;
+  }
+}
+.proj {
+  margin-bottom: 10px;
+  color: #666;
+  &:hover {
+    color: #59f;
+    text-decoration: underline;
+    cursor: pointer;
   }
 }
 </style>
