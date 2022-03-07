@@ -6,5 +6,6 @@ import './style/main.scss'
 import 'element-plus/theme-chalk/index.css'
 import './assets/iconfont/iconfont.css'
 import ElementPlus from 'element-plus'
+import './docs'
 
 createApp(App).use(store).use(router).use(ElementPlus).mount('#app')
