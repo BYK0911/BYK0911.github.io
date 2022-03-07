@@ -2,19 +2,6 @@
   <div class="page">
     <div class="section flex">
       <div class="flex-item section-aside">
-        <div class="panel">
-          <div class="panel-header">
-            <div class="panel-header__title">最近更新</div>
-          </div>
-          <div class="panel-body">
-            <div
-              class="spectial-column text-ellipsis"
-              v-for="item in recent"
-              :key="item.id"
-              @click="open(item)"
-            >{{ item.title }}</div>
-          </div>
-        </div>
         <div class="panel" v-if="topic.length">
           <div class="panel-header">
             <div class="panel-header__title">系列文章</div>
@@ -78,7 +65,6 @@ const docs = (storage.get('docs') as string[] | null || []).map(id => storage.ge
 const docContent = ref()
 const route = useRoute()
 const router = useRouter()
-const recent = docs.slice(-5)
 const doc = ref(docs.filter(d => d.id === route.params.id)[0])
 const topic = ref(doc.value.topic ? docs.filter(d => d.topic === doc.value.topic) : [])
 const open = (d: typeof doc.value) => {
