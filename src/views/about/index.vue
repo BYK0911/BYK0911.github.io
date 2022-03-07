@@ -179,11 +179,8 @@ const open = (href: string) => {
 }
 .proj {
   margin-bottom: 10px;
-  color: #666;
-  &:hover {
-    color: #59f;
-    text-decoration: underline;
-    cursor: pointer;
-  }
+  color: #59f;
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>
