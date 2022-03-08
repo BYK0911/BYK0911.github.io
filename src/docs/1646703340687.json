@@ -1,0 +1,13 @@
+{
+  "value": {
+    "id": "1646703340687",
+    "title": "Canvas 动画",
+    "content": "Canvas动画的原理即快速的切换每一帧的静态画面，给人一种流畅的动画的感觉。\n\n## 开启动画\n如果要持续不断的切换画面，我们可能会想到用定时器，每隔一段时间清空画布，然后重新绘制。\n\n比起定时器 requestAnimationFrame 有着更好的动画化效果，它跟随浏览器的每一帧的重复绘制而持续调用。\n\nrequestAnimationFrame 函数接受一个回调函数作为参数，会在浏览器下次重绘的时候调用。浏览器重绘的频率一般是60帧每秒，大概15ms绘制一次。\n\n```\n// 循环渲染的函数\nfunction render () {\n  // 绘制关键帧\n  drawFrame();\n\n  // 递归调用 render 函数，大概隔15ms再执行一次render函数\n  window.requestAnimationFrame(render);\n}\n\n// 每一帧的绘图方法\nfunction drawFrame () {\n  ...\n}\n\n// 开启动画\nrender();\n```\n\n## 结束动画\n上边的示例一旦开启了动画，浏览器就会持续不断的调用render函数，即便你退出了当前页面进入了其他页面，这时候就会导致程序错误。\n\n如何停掉动画呢？我们需要用到另外一个方法：cancelAnimationFrame。\n\nrequestAnimationFrame会返回一个动画id，cancelAnimationFrame接受这个动画id作为参数来取消requestAnimationFrame调用时绑定的回调函数。\n\n```\nlet animationId;\n// 循环渲染的函数\nfunction render () {\n  // 绘制关键帧\n  drawFrame();\n\n  // 递归调用 render 函数，大概隔15ms再执行一次render函数\n  animationId = window.requestAnimationFrame(render);\n}\n\n// 每一帧的绘图方法\nfunction drawFrame () {\n  ...\n}\n\n// 结束动画\nfunction stop () {\n  // 取消动画\n  window.cancelAnimationFrame(animationId);\n  animationId = null;\n}\n\n// 开启动画\nrender();\n```",
+    "topic": "Canvas 绘图",
+    "keywords": [
+      "canvas",
+      "js",
+      "html5"
+    ]
+  }
+}
