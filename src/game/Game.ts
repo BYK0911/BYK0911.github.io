@@ -59,7 +59,7 @@ export default class Game {
     }
     this.graph.mount(dom)
     this.resetViewport()
-    this.graph.on('click', (e: HsGraph.GraphEvent) => {
+    this.graph.on('touchend', (e: HsGraph.GraphEvent) => {
       if (e.target || this.state == this.readyState) {
         this.state.action(e.target)
         this.graph.update(true, true)
